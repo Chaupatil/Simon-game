@@ -13,7 +13,10 @@ $(document).keypress(function() {
   }
 });
 
-$(".btn").click(function() {
+$(".btn").on("click touchstart", function(event) {
+  // Prevent default behavior on touch
+  event.preventDefault();
+  
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
