@@ -27,8 +27,8 @@ $(".btn").on("click touchstart", function(event) {
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     if (userClickedPattern.length === gamePattern.length) {
-      score++;  // Increase score for each correct sequence
-      $("#score").text(score);  // Update score display
+      score++;
+      $("#score").text(score);
       setTimeout(function() {
         nextSequence();
       }, 1000);
@@ -69,8 +69,8 @@ function playSound(name) {
 
 function startOver() {
   level = 0;
-  score = 0;  // Reset score
-  $("#score").text(score);  // Update score display
+  score = 0;  
+  $("#score").text(score);
   gamePattern = [];
   started = false;
 }
